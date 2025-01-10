@@ -10,6 +10,8 @@ import JobCards from "./JobCards";
 import CommonNavbar from "./CommonNavbar";
 
 function Home() {
+
+
   return (
     <div>
       <div className="w-full">

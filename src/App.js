@@ -6,6 +6,7 @@ import Home from "./Home";
 import SearchJobs from "./SearchJobs";
 import Application from "./Application";
 import Profile from "./Profile";
+import Login from "./Login";
 
 function App() {
   return (
