@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import CommonNavbar from "./CommonNavbar";
+import Login from "./Login";
 
 function Banner() {
+  const [openingLoginForm, setLoginForm] = useState(false);
+
   return (
     <div className="border bg-gradient-to-r from-[#fcefff] to-">
-
-<div className="flex my-5 items-center justify-center w-full">
+      <div className="my-5 flex justify-between mx-10 items-center">
+        <div className="flex items-center">
           <CommonNavbar />
         </div>
+        <button 
+        onClick={()=>{setLoginForm(true)}}
+        className="flex text-lg font-semibold">Login</button>
+      </div>
+
+      {openingLoginForm && <Login setLoginForm = {setLoginForm}/>}
 
       <div className="flex w-9/12 m-20 items-center justify-between">
         <div className="">

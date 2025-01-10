@@ -41,7 +41,7 @@ function CommonNavbar() {
           <Link to="/Application">
             <button
               className={`${
-                findingLocation.pathname === "/Application"
+                findingLocation.pathname === "/Application" 
                   ? "text-[#B400DD]"
                   : ""
               } `}
