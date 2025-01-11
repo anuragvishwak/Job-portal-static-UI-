@@ -10,7 +10,7 @@ function CommonNavbar() {
   return (
     <div>
       {/* Navbar for Small Screens */}
-      <div className="sm:hidden text-[#292E1E] my-5">
+      <div className="sm:hidden flex justify-start text-[#292E1E] ">
         <button
           onClick={() => setopeningNavbar(!openingNavbar)}
           className="border-2 border-[#292E1E] rounded p-1"
@@ -20,7 +20,7 @@ function CommonNavbar() {
 
         {openingNavbar && (
           <div className="absolute top-20 left-20 font-semibold rounded-xl bg-white shadow-lg z-50 w-80 p-5">
-            <Link to={"/"}>se
+            <Link to={"/"}>
               <button
                 onClick={() => {
                   settabSelection("home");

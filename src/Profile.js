@@ -15,7 +15,7 @@ function Profile() {
 
   return (
     <div>
-      <div className="flex items-center justify-center py-5">
+      <div className="flex items-center p-5">
         <CommonNavbar />
       </div>
 
