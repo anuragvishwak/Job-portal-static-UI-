@@ -41,7 +41,7 @@ function Notification() {
             </div>
           </div>
 
-          <div className="flex mt-5 w-8/12 font-semibold items-center justify-between">
+          <div className="lg:flex mt-5 lg:w-8/12 font-semibold items-center justify-between">
             <p className="mx-2 text-[#B400DD]">Application Submittion</p>
 
             <p className="mx-2 text-[#B400DD]">Initial Screening</p>
@@ -73,7 +73,7 @@ function Notification() {
             </div>
           </div>
 
-          <div className="flex mt-5 w-8/12 font-semibold items-center justify-between">
+          <div className="lg:flex mt-5 lg:w-8/12 font-semibold items-center justify-between">
             <p className="mx-2 text-[#B400DD]">Application Submittion</p>
 
             <p className="mx-2 text-[#B400DD]">Initial Screening</p>
@@ -104,7 +104,7 @@ function Notification() {
             </div>
           </div>
 
-          <div className="flex mt-5 w-8/12 font-semibold items-center justify-between">
+          <div className="lg:flex mt-5 lg:w-8/12 font-semibold items-center justify-between">
             <p className="mx-2 text-[#B400DD]">Application Submittion</p>
 
             <p className="mx-2 text-[#B400DD]">Initial Screening</p>
