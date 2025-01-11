@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import CommonNavbar from "./CommonNavbar";
 import img1 from "./Assets/pngwing.com.png";
 import { MdLocationPin } from "react-icons/md";
-import { Check, Mail, Ticket } from "lucide-react";
+import { Calendar, Check, Mail, Ticket, User } from "lucide-react";
 import { FiPhone } from "react-icons/fi";
 import { GoDotFill } from "react-icons/go";
+import { FaFlagUsa } from "react-icons/fa6";
+import { IoLanguageSharp } from "react-icons/io5";
+import { CgGames } from "react-icons/cg";
+import RemainingDetails from "./RemainingDetails";
 
 function Profile() {
   const [currentTab, setcurrentTab] = useState("basic_information");
@@ -15,13 +19,19 @@ function Profile() {
         <CommonNavbar />
       </div>
 
-      <div className="bg-gray-100 p-5 h-screen">
-        <div className="bg-white shadow p-5 rounded-lg">
+      <div className="bg-gray-100 p-5 min-h-screen h-full">
+        <div className="bg-white shadow p-5 rounded-t-3xl">
+          <div className="flex justify-end">
+            <p className="text-purple-500 font-semibold px-4 py-1 rounded-full bg-purple-100">
+              Job Seeker
+            </p>
+          </div>
           <div className="flex items-center">
             <img src={img1} className="h-40 w-40 rounded-full" />
             <div className="ml-5">
               <div className="flex items-center">
                 <p className="text-4xl font-bold">Anurag Vishwakarma</p>
+
                 <div className="flex ml-3 font-bold text-green-500 mt-2 items-center">
                   <Check
                     size={20}
@@ -67,7 +77,9 @@ function Profile() {
           <hr className="my-5" />
 
           <div>
-            <div className={`flex font-semibold items-center justify-between w-6/12`}>
+            <div
+              className={`flex font-semibold items-center justify-between w-6/12`}
+            >
               <button
                 className={` ${
                   currentTab === "basic_information"
@@ -119,6 +131,82 @@ function Profile() {
             </div>
           </div>
         </div>
+        {currentTab === "basic_information" ? (
+          <div className="bg-white shadow p-5 rounded-b-lg mt-5">
+            <p className="text-[#B400DD] text-2xl font-bold">
+              Basic Information
+            </p>
+            <div className="flex justify-between my-3 text-[#292E1E] w-7/12 items-center">
+              <div className="flex items-center">
+                <Calendar
+                  size={40}
+                  className="bg-gray-200 p-1.5 rounded mr-2"
+                />
+                <div className="ml-2">
+                  <p className="text-gray-400">Date of Birth:</p>
+                  <p className="font-semibold">7, February, 2002</p>
+                </div>
+              </div>
+
+              <div className="flex items-center ">
+                <User size={40} className="bg-gray-200 p-1.5 rounded mr-2" />
+                <div className="ml-2">
+                  <p className="text-gray-400">Gender:</p>
+                  <p className="font-semibold">Male</p>
+                </div>
+              </div>
+
+              <div className="flex items-center ">
+                <FaFlagUsa
+                  size={40}
+                  className="bg-gray-200 p-1.5 rounded mr-2"
+                />
+                <div className="ml-2">
+                  <p className="text-gray-400">Nationality:</p>
+                  <p className="font-semibold">Indian</p>
+                </div>
+              </div>
+
+              <div className="flex items-center">
+                <IoLanguageSharp
+                  size={40}
+                  className="bg-gray-200 p-1.5 rounded mr-2"
+                />
+                <div className="ml-2 ">
+                  <p className="text-gray-400">Language:</p>
+                  <p className="font-semibold">Hindi, English, Gujarati</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="">
+              <div className="flex items-center">
+                <CgGames size={40} className="bg-gray-200 p-1.5 rounded mr-2" />
+                <div>
+                  <p className="text-gray-400">Hobbies:</p>
+                  <div className="flex items-center  text-white justify-between w-96">
+                    <p className="px-4 py-1 bg-[#292E1E] rounded-full">
+                      Coding
+                    </p>
+                    <p className="bg-[#292E1E] px-4 py-1 rounded-full">
+                      Painting
+                    </p>
+                    <p className="bg-[#292E1E] px-4 py-1 rounded-full">
+                      Dancing
+                    </p>
+                    <p className="bg-[#292E1E] px-4 py-1 rounded-full">
+                      Gyming
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
+
+        <RemainingDetails currentTab={currentTab} />
       </div>
     </div>
   );
