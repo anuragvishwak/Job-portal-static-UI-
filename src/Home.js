@@ -17,7 +17,7 @@ function Home() {
       <div className="w-full">
         <Banner />
 
-        <div className="m-10">
+        <div className="m-5 sm:m-10">
           <p className="text-2xl mb-2 text-[#292E1E] font-bold">Top Companies</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
             <div className="border rounded shadow p-5">
@@ -78,7 +78,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="m-10 flex">
+        <div className="m-5 sm:m-10 flex">
           <div>
             <p className="text-2xl text-[#292E1E] font-bold mb-2">Top Jobs</p>
             <JobCards />
