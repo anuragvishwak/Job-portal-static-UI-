@@ -48,10 +48,14 @@ function Filter() {
        <div className="bg-black z-50 flex flex-col justify-center items-center fixed inset-0 bg-opacity-50">
          <div className="bg-white rounded p-5">
          <div className="flex mb-3 items-center justify-between">
-         <p className="text">Filters</p>
-         <button><X/></button>
+         <p className="text-2xl text-[#B400DD] font-bold">Filters</p>
+         <button
+         onClick={ ()=>{
+          setShowFilters(false);
+         }}
+         ><X/></button>
          </div>
-         <div className="grid grid-cols-2 gap-3">
+         <div className="grid grid-cols-2 gap-7">
           <div clas>
             <Select
               options={experienceOptions}

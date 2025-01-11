@@ -14,7 +14,7 @@ function SearchJobs() {
 
   return (
     <div className="">
-      <div className="flex items-center justify-center py-5">
+      <div className="flex items-center p-5">
         <CommonNavbar />
       </div>
       <div className="flex items-center border-b justify-between px-5 py-3">

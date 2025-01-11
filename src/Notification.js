@@ -8,7 +8,7 @@ import { FaDotCircle } from "react-icons/fa";
 function Notification() {
   return (
     <div>
-      <div className="flex items-center justify-center py-5">
+      <div className="flex items-center p-5">
         <CommonNavbar />
       </div>
 
@@ -25,97 +25,69 @@ function Notification() {
           </div>
         </div>
 
-        <div className="bg-white p-5 shadow">
+        <div className="bg-green-50 p-5 shadow">
           <div className="flex justify-between">
             <div className="flex items-center">
-              <img src={img2} className="h-10" />
+              <img src={img2} className="h-5 sm:h-10" />
               <div className="ml-5">
                 <p className="font-bold text-xl">Frotend Developer</p>
                 <p className="text-gray-400">Adobe</p>
               </div>
             </div>
-            <div>
+            <div className="flex flex-col">
+              <div className="flex justify-end mb-10">
+                <button>
+                  <FaDotCircle className="text-green-500" size={25} />
+                </button>
+              </div>
               <button className="bg-[#B400DD] text-white px-4 py-1 rounded">
                 Details
               </button>
             </div>
           </div>
-
-          <div className="lg:flex mt-5 lg:w-8/12 font-semibold items-center justify-between">
-            <p className="mx-2 text-[#B400DD]">Application Submittion</p>
-
-            <p className="mx-2 text-[#B400DD]">Initial Screening</p>
-
-            <p className="mx-2 text-[#B400DD]">Technical Interview</p>
-
-            <p className="mx-2">Code Chalenge</p>
-
-            <p className="mx-2 text-[#292E1E]">Culture Fit Interview</p>
-
-            <p className="mx-2 text-[#292E1E]">Final Interview</p>
-          </div>
         </div>
-
 
         <div className="bg-white mt-5 p-5 shadow">
           <div className="flex justify-between">
             <div className="flex items-center">
-              <img src={img3} className="h-10" />
+              <img src={img3} className="h-5 sm:h-10" />
               <div className="ml-5">
                 <p className="font-bold text-xl">Frotend Developer</p>
                 <p className="text-gray-400">Google Inc</p>
               </div>
             </div>
-            <div>
+            <div className="flex flex-col">
+              <div className="flex justify-end mb-10">
+                <button>
+                  <FaDotCircle size={25} />
+                </button>
+              </div>
               <button className="bg-[#B400DD] text-white px-4 py-1 rounded">
                 Details
               </button>
             </div>
-          </div>
-
-          <div className="lg:flex mt-5 lg:w-8/12 font-semibold items-center justify-between">
-            <p className="mx-2 text-[#B400DD]">Application Submittion</p>
-
-            <p className="mx-2 text-[#B400DD]">Initial Screening</p>
-
-            <p className="mx-2 text-[#B400DD]">Technical Interview</p>
-
-            <p className="mx-2">Code Chalenge</p>
-
-            <p className="mx-2 text-[#292E1E]">Culture Fit Interview</p>
-
-            <p className="mx-2 text-[#292E1E]">Final Interview</p>
           </div>
         </div>
 
         <div className="bg-white mt-5 p-5 shadow">
           <div className="flex justify-between">
             <div className="flex items-center">
-              <img src={img4} className="h-10" />
+              <img src={img4} className="h-5 sm:h-10" />
               <div className="ml-5">
                 <p className="font-bold text-xl">Backend Developer</p>
                 <p className="text-gray-400">Capgemini</p>
               </div>
             </div>
-            <div>
+            <div className="flex flex-col">
+              <div className="flex justify-end mb-10">
+                <button>
+                  <FaDotCircle size={25} />
+                </button>
+              </div>
               <button className="bg-[#B400DD] text-white px-4 py-1 rounded">
                 Details
               </button>
             </div>
-          </div>
-
-          <div className="lg:flex mt-5 lg:w-8/12 font-semibold items-center justify-between">
-            <p className="mx-2 text-[#B400DD]">Application Submittion</p>
-
-            <p className="mx-2 text-[#B400DD]">Initial Screening</p>
-
-            <p className="mx-2 text-[#B400DD]">Technical Interview</p>
-
-            <p className="mx-2">Code Chalenge</p>
-
-            <p className="mx-2 text-[#292E1E]">Culture Fit Interview</p>
-
-            <p className="mx-2 text-[#292E1E]">Final Interview</p>
           </div>
         </div>
       </div>
