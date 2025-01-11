@@ -9,7 +9,7 @@ function CommonNavbar() {
   return (
     <div>
       <div className="">
-        <div className="flex text-lg font-semibold items-center justify-between text-[#292E1E]  w-[600px]">
+        <div className="hidden sm:flex md:text-lg font-semibold items-center justify-between text-[#292E1E] w-[400px] md:w-[500px] lg:w-[600px]">
           <Link to={"/"}>
             <button
               onClick={() => {
