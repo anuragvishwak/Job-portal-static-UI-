@@ -1,3 +1,4 @@
+import { X } from "lucide-react";
 import React, { useState } from "react";
 import Select from "react-select";
 
@@ -6,6 +7,7 @@ function Filter() {
   const [selectedJobType, setSelectedJobType] = useState(null);
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [selectedIndustry, setSelectedIndustry] = useState(null);
+  const [showFilters, setShowFilters] = useState(false);
 
   const experienceOptions = [
     { value: 1, label: "1 Year" },
@@ -34,41 +36,98 @@ function Filter() {
     { value: "electronics", label: "Electronics" },
   ];
   return (
-    <div className="flex justify-between w-[730px] items-center">
-      <div>
-        <Select
-          options={experienceOptions}
-          value={selectedExperience}
-          onChange={setSelectedExperience}
-          placeholder="Select Experience"
-        />
-      </div>
+    <div>
+      <button
+        onClick={() => setShowFilters(!showFilters)}
+        className="xl:hidden px-2 rounded text-white py-1 bg-[#B400DD]"
+      >
+        Filters
+      </button>
 
-      <div>
-        <Select
-          options={jobTypeOptions}
-          value={selectedJobType}
-          onChange={setSelectedJobType}
-          placeholder="Select Job Type"
-        />
-      </div>
+      {showFilters && (
+       <div className="bg-black z-50 flex flex-col justify-center items-center fixed inset-0 bg-opacity-50">
+         <div className="bg-white rounded p-5">
+         <div className="flex mb-3 items-center justify-between">
+         <p className="text">Filters</p>
+         <button><X/></button>
+         </div>
+         <div className="grid grid-cols-2 gap-3">
+          <div clas>
+            <Select
+              options={experienceOptions}
+              value={selectedExperience}
+              onChange={setSelectedExperience}
+              placeholder="Select Experience"
+            />
+          </div>
 
-      <div>
-        <Select
-          options={locationOptions}
-          value={selectedLocation}
-          onChange={setSelectedLocation}
-          placeholder="Select Location"
-        />
-      </div>
+          <div>
+            <Select
+              options={jobTypeOptions}
+              value={selectedJobType}
+              onChange={setSelectedJobType}
+              placeholder="Select Job Type"
+            />
+          </div>
 
-      <div>
-        <Select
-          options={industryOptions}
-          value={selectedIndustry}
-          onChange={setSelectedIndustry}
-          placeholder="Select Industry"
-        />
+          <div>
+            <Select
+              options={locationOptions}
+              value={selectedLocation}
+              onChange={setSelectedLocation}
+              placeholder="Select Location"
+            />
+          </div>
+
+          <div>
+            <Select
+              options={industryOptions}
+              value={selectedIndustry}
+              onChange={setSelectedIndustry}
+              placeholder="Select Industry"
+            />
+          </div>
+        </div>
+         </div>
+       </div>
+      )}
+
+      <div className="hidden xl:grid grid-cols-4 gap-5">
+        <div>
+          <Select
+            options={experienceOptions}
+            value={selectedExperience}
+            onChange={setSelectedExperience}
+            placeholder="Select Experience"
+          />
+        </div>
+
+        <div>
+          <Select
+            options={jobTypeOptions}
+            value={selectedJobType}
+            onChange={setSelectedJobType}
+            placeholder="Select Job Type"
+          />
+        </div>
+
+        <div>
+          <Select
+            options={locationOptions}
+            value={selectedLocation}
+            onChange={setSelectedLocation}
+            placeholder="Select Location"
+          />
+        </div>
+
+        <div>
+          <Select
+            options={industryOptions}
+            value={selectedIndustry}
+            onChange={setSelectedIndustry}
+            placeholder="Select Industry"
+          />
+        </div>
       </div>
     </div>
   );

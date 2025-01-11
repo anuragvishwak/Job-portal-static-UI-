@@ -10,6 +10,8 @@ import DetailedDescription from "./DetailedDescription";
 function SearchJobs() {
   const [currentDescription, setcurrentDescription] = useState("adobe");
 
+  
+
   return (
     <div className="">
       <div className="flex items-center justify-center py-5">
