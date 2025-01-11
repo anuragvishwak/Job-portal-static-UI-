@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import Notification from "./Notification";
 import "./App.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -16,6 +17,8 @@ function App() {
         <Route path="/SearchJobs" element={<SearchJobs />} />
         <Route path="/Application" element={<Application />} />
         <Route path="/Profile" element={<Profile />} />
+        <Route path="/Notification" element={<Notification />} />
+
 
       </Routes>
     </Router>

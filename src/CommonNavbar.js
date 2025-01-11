@@ -41,7 +41,7 @@ function CommonNavbar() {
           <Link to="/Application">
             <button
               className={`${
-                findingLocation.pathname === "/Application" 
+                findingLocation.pathname === "/Application"
                   ? "text-[#B400DD]"
                   : ""
               } `}
@@ -53,12 +53,10 @@ function CommonNavbar() {
             </button>
           </Link>
 
-          <Link to={'/Profile'}>
-            <button 
-            className={`${
-                findingLocation.pathname === "/Profile"
-                  ? "text-[#B400DD]"
-                  : ""
+          <Link to={"/Profile"}>
+            <button
+              className={`${
+                findingLocation.pathname === "/Profile" ? "text-[#B400DD]" : ""
               } `}
               onClick={() => {
                 settabSelection("profile");
@@ -67,13 +65,15 @@ function CommonNavbar() {
               Profile
             </button>
           </Link>
-          <button
-            onClick={() => {
-              settabSelection("notification");
-            }}
-          >
-            Notifications
-          </button>
+          <Link to={"/Notification"}>
+            <button
+              onClick={() => {
+                settabSelection("notification");
+              }}
+            >
+              Notifications
+            </button>
+          </Link>
         </div>
       </div>
     </div>
