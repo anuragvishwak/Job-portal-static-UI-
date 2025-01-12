@@ -37,7 +37,7 @@ function DetailedDescription({ currentDescription }) {
     <div>
       <div
         className={`p-5 bg-white ${
-          currentDescription === "adobe" ? "block" : "hidden"
+          currentDescription === "adobe" ? "hidden md:block" : "hidden"
         } shadow rounded  border`}
       >
         <div className="flex justify-between">
@@ -209,7 +209,7 @@ function DetailedDescription({ currentDescription }) {
       {/* GOOGLE */}
       <div
         className={`p-5 bg-white  ${
-          currentDescription === "google" ? "block" : "hidden"
+          currentDescription === "google" ? "hidden md:block" : "hidden"
         } shadow rounded border`}
       >
         <div className="flex justify-between">
