@@ -39,7 +39,7 @@ function Filter() {
     <div>
       <button
         onClick={() => setShowFilters(!showFilters)}
-        className="xl:hidden px-2 rounded text-white py-1 bg-[#B400DD]"
+        className="xl:hidden px-4 rounded text-white py-1.5 bg-[#B400DD]"
       >
         Filters
       </button>

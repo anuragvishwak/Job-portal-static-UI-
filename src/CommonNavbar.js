@@ -19,7 +19,7 @@ function CommonNavbar() {
         </button>
 
         {openingNavbar && (
-          <div className="absolute top-20 left-20 font-semibold rounded-xl bg-white shadow-lg z-50 w-80 p-5">
+          <div className="absolute top-20 justify-center font-semibold rounded-xl bg-white shadow-lg z-50  p-5">
             <Link to={"/"}>
               <button
                 onClick={() => {
