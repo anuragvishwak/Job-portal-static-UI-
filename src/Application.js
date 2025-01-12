@@ -21,18 +21,18 @@ function Application() {
       </div>
 
       <div className="bg-gray-100 p-5 h-full">
-        <div className="flex">
-          <div className="w-5/12">
-            <div className="rounded bg-white mb-5 shadow p-5 border">
+        <div className="md:flex">
+          <div className="w-full lg:w-5/12">
+            <div className="rounded bg-white mb-5 lg:w-96 shadow p-5 border">
               <div className="flex items-center justify-between">
-                <div className="flex items-center">
+                <div className="lg:flex items-center">
                   <img className="h-5" src={img3} />
-                  <div className="ml-3">
+                  <div className="lg:ml-3">
                     <p className="text-lg font-bold">Frontend Developer</p>
                     <p className="text-gray-400">Google Inc</p>
                   </div>
                 </div>
-                <div className="font-bold text-[#292E1E]">
+                <div className="font-bold lg:block hidden  text-[#292E1E]">
                   <p className=" text-green-500 text-end">$60000 PA</p>
 
                   <div className="flex items-center text-sm">
@@ -46,7 +46,7 @@ function Application() {
                 <p>Callifornia USA</p>
               </div>
 
-              <div className="">
+              <div className="lg:w-60">
                 <p className="text-justify text-sm my-5">
                   We are looking for a talented Frontend Developer to build
                   user-friendly web interfaces. You'll use HTML, CSS,
@@ -54,8 +54,8 @@ function Application() {
                 </p>
               </div>
 
-              <div className="flex items-center justify-between">
-                <p className=" text-sm text-gray-400">24, March, 2024</p>
+              <div className="lg:flex  items-center justify-between">
+                <p className=" text-sm  mb-2 lg:mb-0 text-gray-400">24, March, 2024</p>
                 <button
                   onClick={() => {
                     setselectJob("google");
@@ -67,16 +67,189 @@ function Application() {
               </div>
             </div>
 
-            <div className="rounded mb-5 bg-white shadow p-5 border">
-              <div className="flex items-center justify-between">
+            <div className={`bg-white p-5 shadow rounded ${selectJob === 'google'? ' block md:hidden' : 'hidden'}`}>
+              <div className="xl:flex justify-between">
+                <div>
+                  <p className="font-bold text-[#292E1E] text-2xl">
+                    Application Status
+                  </p>
+                  <p className="text-gray-400 md:w-[500px]">
+                    Track your application progress for Senior Frontend
+                    Developer at Google Inc
+                  </p>
+                </div>
+
                 <div className="flex items-center">
-                  <img className="h-5" src={img2} />
+                  <img className="h-8" src={img3} />
                   <div className="ml-3">
+                    <p className="text-xl font-bold">Frontend Developer</p>
+                    <p className="text-gray-400">Google Inc</p>
+                  </div>
+                </div>
+              </div>
+              <div className="text-gray-400 my-5">
+                <p>Application Date: 24, March, 2024</p>
+              </div>
+
+              <div className="border-l-8 border-green-200 rounded-xl">
+                <div className="sm:flex border border-green-200 p-3 rounded-l rounded-r-xl justify-between">
+                  <div>
+                    <div className="flex items-center">
+                      <Check
+                        size={40}
+                        className="text-green-500 border p-1 rounded-full border-green-500"
+                      />
+                      <div className="ml-3">
+                        <p className="text-lg text-[#292E1E] font-semibold">
+                          Application Submittion
+                        </p>
+                        <p className="text-gray-400">Date: 2024-05-15</p>
+                      </div>
+                    </div>
+                    <p className="text-[#B400DD]">
+                      Application submitted successfully
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-green-500 bg-green-100 px-4 py-1 rounded-full font-bold">
+                      Completed
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-l-8 border-green-200 rounded-xl">
+                <div className="sm:flex border my-3 border-green-200 p-3 rounded-l rounded-xl justify-between">
+                  <div>
+                    <div className="flex items-center">
+                      <Check
+                        size={40}
+                        className="text-green-500 border p-1 rounded-full border-green-500"
+                      />
+                      <div className="ml-3">
+                        <p className="text-lg text-[#292E1E] font-semibold">
+                          Initial Screening
+                        </p>
+                        <p className="text-gray-400">Date: 2024-05-15</p>
+                      </div>
+                    </div>
+                    <p className="text-[#B400DD]">Passed Initial Screening</p>
+                  </div>
+                  <div>
+                    <p className="text-green-500 bg-green-100 px-4 py-1 rounded-full font-bold">
+                      Completed
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-l-8 border-yellow-200 rounded-xl">
+                <div className="sm:flex border-l-yellow-200 border mb-3 border-gray-300  p-3 rounded-l rounded-r-xl justify-between">
+                  <div className="">
+                    <div className="flex items-center">
+                      <Clock
+                        size={40}
+                        className="text-yellow-500 border p-1 rounded-full border-yellow-500"
+                      />
+                      <div className="ml-3">
+                        <p className="text-lg text-[#292E1E] font-semibold">
+                          Technical Interview
+                        </p>
+                        <p className="text-gray-400">Date: 2024-05-15</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-yellow-500 bg-yellow-100 px-4 py-1 rounded-full font-bold">
+                      In-Progress
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-l-8 border-gray-200 rounded-xl">
+                <div className="sm:flex border-l-gray-200 border mb-3 border-gray-300  p-3 rounded-l rounded-r-xl justify-between">
+                  <div className="">
+                    <div className="flex items-center">
+                      <CircleAlert
+                        size={40}
+                        className="text-gray-500 border p-1 rounded-full border-gray-500"
+                      />
+                      <div className="ml-3">
+                        <p className="text-lg text-[#292E1E] font-semibold">
+                          Code Challenge
+                        </p>
+                        <p className="text-gray-400">Date: 2024-05-15</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-gray-500 bg-gray-100 px-4 py-1 rounded-full font-bold">
+                      In-Progress
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-l-8 border-gray-200 rounded-xl">
+                <div className="sm:flex border-l-gray-200 border mb-3 border-gray-300  p-3 rounded-l rounded-r-xl justify-between">
+                  <div className="">
+                    <div className="flex items-center">
+                      <CircleAlert
+                        size={40}
+                        className="text-gray-500 border p-1 rounded-full border-gray-500"
+                      />
+                      <div className="ml-3">
+                        <p className="text-lg text-[#292E1E] font-semibold">
+                          Culture Fit Interview
+                        </p>
+                        <p className="text-gray-400">Date: 2024-05-15</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-gray-500 bg-gray-100 px-4 py-1 rounded-full font-bold">
+                      In-Progress
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-l-8 border-gray-200 rounded-xl">
+                <div className="sm:flex border-l-gray-200 border mb-3 border-gray-300  p-3 rounded-l rounded-r-xl justify-between">
+                  <div className="">
+                    <div className="flex items-center">
+                      <CircleAlert
+                        size={40}
+                        className="text-gray-500 border p-1 rounded-full border-gray-500"
+                      />
+                      <div className="ml-3">
+                        <p className="text-lg text-[#292E1E] font-semibold">
+                          Final Interview
+                        </p>
+                        <p className="text-gray-400">Date: 2024-05-15</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-gray-500 bg-gray-100 px-4 py-1 rounded-full font-bold">
+                      In-Progress
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded mb-5 bg-white md:mt-0 mt-5 lg:w-96 shadow p-5 border">
+              <div className="flex items-center justify-between">
+                <div className="lg:flex items-center">
+                  <img className="h-5" src={img2} />
+                  <div className="lg:ml-3">
                     <p className="text-lg font-bold">Frontend Developer</p>
                     <p className="text-gray-400">Adobe</p>
                   </div>
                 </div>
-                <div className="font-bold text-[#292E1E]">
+                <div className="font-bold lg:block hidden text-[#292E1E]">
                   <p className=" text-green-500 text-end">$60000 PA</p>
 
                   <div className="flex items-center text-sm">
@@ -98,8 +271,8 @@ function Application() {
                 </p>
               </div>
 
-              <div className="flex items-center justify-between">
-                <p className=" text-sm text-gray-400">24, March, 2024</p>
+              <div className="lg:flex items-center justify-between">
+                <p className="mb-2 lg:mb-0 text-sm text-gray-400">24, March, 2024</p>
                 <button
                   onClick={() => {
                     setselectJob("adobe");
@@ -111,16 +284,189 @@ function Application() {
               </div>
             </div>
 
-            <div className="rounded bg-white shadow p-5 border">
-              <div className="flex items-center justify-between">
+            <div className={`bg-white p-5 shadow rounded ${selectJob === 'adobe'? 'block md:hidden' : 'hidden'}`}>
+              <div className="xl:flex justify-between">
+                <div>
+                  <p className="font-bold text-[#292E1E] text-2xl">
+                    Application Status
+                  </p>
+                  <p className="text-gray-400 md:w-[500px]">
+                    Track your application progress for Senior Frontend
+                    Developer at Google Inc
+                  </p>
+                </div>
+
                 <div className="flex items-center">
-                  <img className="h-5" src={img4} />
+                  <img className="h-8" src={img3} />
                   <div className="ml-3">
+                    <p className="text-xl font-bold">Frontend Developer</p>
+                    <p className="text-gray-400">Google Inc</p>
+                  </div>
+                </div>
+              </div>
+              <div className="text-gray-400 my-5">
+                <p>Application Date: 24, March, 2024</p>
+              </div>
+
+              <div className="border-l-8 border-green-200 rounded-xl">
+                <div className="sm:flex border border-green-200 p-3 rounded-l rounded-r-xl justify-between">
+                  <div>
+                    <div className="flex items-center">
+                      <Check
+                        size={40}
+                        className="text-green-500 border p-1 rounded-full border-green-500"
+                      />
+                      <div className="ml-3">
+                        <p className="text-lg text-[#292E1E] font-semibold">
+                          Application Submittion
+                        </p>
+                        <p className="text-gray-400">Date: 2024-05-15</p>
+                      </div>
+                    </div>
+                    <p className="text-[#B400DD]">
+                      Application submitted successfully
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-green-500 bg-green-100 px-4 py-1 rounded-full font-bold">
+                      Completed
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-l-8 border-green-200 rounded-xl">
+                <div className="sm:flex border my-3 border-green-200 p-3 rounded-l rounded-xl justify-between">
+                  <div>
+                    <div className="flex items-center">
+                      <Check
+                        size={40}
+                        className="text-green-500 border p-1 rounded-full border-green-500"
+                      />
+                      <div className="ml-3">
+                        <p className="text-lg text-[#292E1E] font-semibold">
+                          Initial Screening
+                        </p>
+                        <p className="text-gray-400">Date: 2024-05-15</p>
+                      </div>
+                    </div>
+                    <p className="text-[#B400DD]">Passed Initial Screening</p>
+                  </div>
+                  <div>
+                    <p className="text-green-500 bg-green-100 px-4 py-1 rounded-full font-bold">
+                      Completed
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-l-8 border-yellow-200 rounded-xl">
+                <div className="sm:flex border-l-yellow-200 border mb-3 border-gray-300  p-3 rounded-l rounded-r-xl justify-between">
+                  <div className="">
+                    <div className="flex items-center">
+                      <Clock
+                        size={40}
+                        className="text-yellow-500 border p-1 rounded-full border-yellow-500"
+                      />
+                      <div className="ml-3">
+                        <p className="text-lg text-[#292E1E] font-semibold">
+                          Technical Interview
+                        </p>
+                        <p className="text-gray-400">Date: 2024-05-15</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-yellow-500 bg-yellow-100 px-4 py-1 rounded-full font-bold">
+                      In-Progress
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-l-8 border-gray-200 rounded-xl">
+                <div className="sm:flex border-l-gray-200 border mb-3 border-gray-300  p-3 rounded-l rounded-r-xl justify-between">
+                  <div className="">
+                    <div className="flex items-center">
+                      <CircleAlert
+                        size={40}
+                        className="text-gray-500 border p-1 rounded-full border-gray-500"
+                      />
+                      <div className="ml-3">
+                        <p className="text-lg text-[#292E1E] font-semibold">
+                          Code Challenge
+                        </p>
+                        <p className="text-gray-400">Date: 2024-05-15</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-gray-500 bg-gray-100 px-4 py-1 rounded-full font-bold">
+                      In-Progress
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-l-8 border-gray-200 rounded-xl">
+                <div className="sm:flex border-l-gray-200 border mb-3 border-gray-300  p-3 rounded-l rounded-r-xl justify-between">
+                  <div className="">
+                    <div className="flex items-center">
+                      <CircleAlert
+                        size={40}
+                        className="text-gray-500 border p-1 rounded-full border-gray-500"
+                      />
+                      <div className="ml-3">
+                        <p className="text-lg text-[#292E1E] font-semibold">
+                          Culture Fit Interview
+                        </p>
+                        <p className="text-gray-400">Date: 2024-05-15</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-gray-500 bg-gray-100 px-4 py-1 rounded-full font-bold">
+                      In-Progress
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border-l-8 border-gray-200 rounded-xl">
+                <div className="sm:flex border-l-gray-200 border mb-3 border-gray-300  p-3 rounded-l rounded-r-xl justify-between">
+                  <div className="">
+                    <div className="flex items-center">
+                      <CircleAlert
+                        size={40}
+                        className="text-gray-500 border p-1 rounded-full border-gray-500"
+                      />
+                      <div className="ml-3">
+                        <p className="text-lg text-[#292E1E] font-semibold">
+                          Final Interview
+                        </p>
+                        <p className="text-gray-400">Date: 2024-05-15</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-gray-500 bg-gray-100 px-4 py-1 rounded-full font-bold">
+                      In-Progress
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded bg-white md:mt-0 mt-5  shadow p-5 border">
+              <div className="flex items-center justify-between">
+                <div className="lg:flex items-center">
+                  <img className="h-5" src={img4} />
+                  <div className="lg:ml-3">
                     <p className="text-lg font-bold">Backend Developer</p>
                     <p className="text-gray-400">Capgemini</p>
                   </div>
                 </div>
-                <div className="font-bold text-[#292E1E]">
+                <div className="font-bold lg:block hidden text-[#292E1E]">
                   <p className=" text-green-500 text-end">$40000 PA</p>
 
                   <div className="flex items-center text-sm">
@@ -142,8 +488,8 @@ function Application() {
                 </p>
               </div>
 
-              <div className="flex items-center justify-between">
-                <p className=" text-sm text-gray-400">24, March, 2024</p>
+              <div className="lg:flex items-center justify-between">
+                <p className="mb-2 lg:mb-0 text-sm text-gray-400">24, March, 2024</p>
                 <button
                   onClick={() => {
                     setselectJob("capgemini");
@@ -157,13 +503,13 @@ function Application() {
           </div>
 
           <div className="ml-5 w-full">
-            <div className={`bg-white p-5 shadow rounded ${selectJob === 'google'? 'block' : 'hidden'}`}>
-              <div className="flex items-center justify-between">
+            <div className={`bg-white p-5 shadow rounded ${selectJob === 'google'? 'hidden md:block' : 'hidden'}`}>
+              <div className="xl:flex justify-between">
                 <div>
                   <p className="font-bold text-[#292E1E] text-2xl">
                     Application Status
                   </p>
-                  <p className="text-gray-400">
+                  <p className="text-gray-400 w-auto lg:w-[500px]">
                     Track your application progress for Senior Frontend
                     Developer at Google Inc
                   </p>
@@ -305,7 +651,7 @@ function Application() {
                 </div>
               </div>
 
-              <div className="border-l-8 border-gray-200 rounded-xl">
+              <div className="border-l-8  border-gray-200 rounded-xl">
                 <div className="flex border-l-gray-200 border mb-3 border-gray-300  p-3 rounded-l rounded-r-xl justify-between">
                   <div className="">
                     <div className="flex items-center">
@@ -651,7 +997,7 @@ function Application() {
                 </div>
               </div>
 
-              <div className="border-l-8 border-gray-200 rounded-xl">
+              <div className="border-l-8 border-gray-200  rounded-xl">
                 <div className="flex border-l-gray-200 border mb-3 border-gray-300  p-3 rounded-l rounded-r-xl justify-between">
                   <div className="">
                     <div className="flex items-center">
