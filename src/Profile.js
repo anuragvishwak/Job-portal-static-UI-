@@ -26,11 +26,11 @@ function Profile() {
               Job Seeker
             </p>
           </div>
-          <div className="flex items-center">
-            <img src={img1} className="h-40 w-40 rounded-full" />
-            <div className="ml-5">
+          <div className="md:flex items-center">
+            <img src={img1} className="h-20 w-20 md:h-40 md:w-40 rounded-full" />
+            <div className="md:ml-5">
               <div className="flex items-center">
-                <p className="text-4xl font-bold">Anurag Vishwakarma</p>
+                <p className="text-2xl md:text-4xl font-bold">Anurag Vishwakarma</p>
 
                 <div className="flex ml-3 font-bold text-green-500 mt-2 items-center">
                   <Check
@@ -40,15 +40,15 @@ function Profile() {
                   <p>Active</p>
                 </div>
               </div>
-              <div className="flex mt-1 items-center">
-                <p className="text-gray-400 text-lg">
+              <div className="sm:flex  mt-1 items-center">
+                <p className="text-gray-400 sm:text-lg">
                   Senior Frontend Developer
                 </p>
-                <span className="mx-1">
+                <span className="hidden sm:block mx-1">
                   <GoDotFill className="text-xl text-gray-400" />
                 </span>
 
-                <div className="flex text-gray-400 text-lg items-center">
+                <div className="flex text-gray-400 sm:text-lg items-center">
                   <MdLocationPin size={20} />
                   <p>Zundal Ahmedabad, India</p>
                 </div>
@@ -62,13 +62,13 @@ function Profile() {
             <p className="border py-1 px-2 rounded">Tailwind CSS</p>
           </div>
 
-          <div className="flex items-center">
-            <div className="flex rounded border p-2 w-80 shadow items-center">
+          <div className="md:flex items-center">
+            <div className="flex rounded border p-2 w-80 items-center">
               <Mail className="mr-3" />
               <p>anuragvishwakarma4132@gmail.com</p>
             </div>
 
-            <div className="flex border shadow rounded ml-5 justify-center w-80 p-2 items-center">
+            <div className="flex border mt-3 md:mt-0 rounded md:ml-5 justify-center w-80 p-2 items-center">
               <FiPhone className="mr-3" />
               <p>+91 910403185</p>
             </div>
@@ -78,7 +78,7 @@ function Profile() {
 
           <div>
             <div
-              className={`flex font-semibold items-center justify-between w-6/12`}
+              className={` font-semibold grid  text-sm sm:text-base grid-cols-2 md:grid-cols-4 lg:w-6/12`}
             >
               <button
                 className={` ${
@@ -136,7 +136,7 @@ function Profile() {
             <p className="text-[#B400DD] text-2xl font-bold">
               Basic Information
             </p>
-            <div className="flex justify-between my-3 text-[#292E1E] w-7/12 items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 my-3 text-[#292E1E] items-center">
               <div className="flex items-center">
                 <Calendar
                   size={40}
@@ -184,7 +184,7 @@ function Profile() {
                 <CgGames size={40} className="bg-gray-200 p-1.5 rounded mr-2" />
                 <div>
                   <p className="text-gray-400">Hobbies:</p>
-                  <div className="flex items-center  text-white justify-between w-96">
+                  <div className="grid  grid-cols-3 text-sm sm:text-base gap-3 sm:grid-cols-4 text-white">
                     <p className="px-4 py-1 bg-[#292E1E] rounded-full">
                       Coding
                     </p>

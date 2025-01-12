@@ -20,25 +20,29 @@ function SearchJobs() {
 
   return (
     <div className="">
-      <div className="flex items-center p-5">
+      <div className="flex items-center pt-5 pr-5 pl-5 md:p-5">
         <CommonNavbar />
-      </div>
-      <div className="flex items-center border-b justify-between px-5 py-3">
         <input
           placeholder="Search Jobs"
-          className="border border-gray-400 px-2 w-48 sm:w-64 py-1.5 rounded"
+          className="border border-gray-400 px-2 w-full sm:w-64 py-1 sm:hidden ml-4 rounded"
         ></input>
-        <div className="flex items-center">
+      </div>
+      <div className="sm:flex items-center justify-between px-5 mb-3">
+        <input
+          placeholder="Search Jobs"
+          className="border hidden sm:block border-gray-400 px-2 w-full sm:w-64 py-1.5 rounded"
+        ></input>
+        <div className="flex items-center mt-3 sm:mt-0">
           <Filter />
           <button className="bg-[#B400DD] ml-3 sm:ml-5 text-white px-4 py-1.5 rounded">
-            Explore
+            Explore Companies
           </button>
         </div>
       </div>
       <div className="bg-gray-100 min-h-screen h-full">
-        <div className="flex p-5">
+        <div className="md:flex p-5">
           <div className="w-full">
-            <div className="p-5  mb-5 bg-white shadow rounded border">
+            <div className="p-5 w-full mb-5 bg-white shadow rounded border">
               <div className="flex justify-between">
                 <div className="flex items-center">
                   <img className="h-8" src={img2} />
@@ -96,7 +100,7 @@ function SearchJobs() {
             </div>
 
             <div
-              className={`p-5 mb-5 md:hidden bg-white ${
+              className={`p-5 mb-5 md:hidden w-full bg-white ${
                 currentDescription === "adobe" ? "block" : "hidden"
               } shadow rounded  border`}
             >
@@ -283,7 +287,7 @@ function SearchJobs() {
                     <p className="text-gray-400">Google Inc</p>
                   </div>
                 </div>
-                <div className="font-bold text-[#292E1E]">
+                <div className="font-bold hidden sm:block text-[#292E1E]">
                   <p className=" text-green-500 text-end">$60000 PA</p>
                 </div>
               </div>

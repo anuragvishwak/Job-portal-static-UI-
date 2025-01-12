@@ -19,21 +19,21 @@ function RemainingDetails({ currentTab }) {
               </p>
             </div>
 
-            <div className="flex items-center gap-5">
-              <div className="text-[#292E1E] border rounded-2xl p-5 w-full">
+            <div className="xl:flex items-center gap-5">
+              <div className="text-[#292E1E] xl:mt-0 mb-5 border rounded-2xl p-5 w-full">
                 <p className="font-bold  text-xl">Bachelor of Technology</p>
-                <div className="flex text-sm justify-between  items-center">
-                  <div className="flex items-center text-gray-400 font-semibold">
+                <div className="md:flex text-sm justify-between items-center">
+                  <div className="flex items-center sm:mt-0 mt-2 text-gray-400 font-semibold">
                     <FaBook />
                     <p className="ml-1">Indian Institute of Technology</p>
                   </div>
 
-                  <div className="flex items-center text-gray-400 font-semibold">
+                  <div className="flex items-center my-2 md:my-0 text-gray-400 font-semibold">
                     <FaLocationDot />
                     <p className="ml-1">Mumbai, India</p>
                   </div>
 
-                  <div className="flex items-center text-gray-400 font-semibold">
+                  <div className="flex items-center mb-2 md:mb-0 text-gray-400 font-semibold">
                     <Calendar size={20} />
                     <p className="ml-1">2020 - 2024</p>
                   </div>
@@ -45,18 +45,18 @@ function RemainingDetails({ currentTab }) {
                 </div>
 
                 <div className="my-5">
-                  <p className="font-semibold mb-2">Key Subjects</p>
-                  <div className="flex items-center font-semibold justify-between ">
-                    <p className="bg-gray-100 px-4 py-1 rounded-full">
+                  <p className="font-semibold  mb-2">Key Subjects</p>
+                  <div className="grid grid-cols-1 text-gray-400 sm:text-[#292E1E] sm:grid-cols-2 md:grid-cols-4 sm:gap-5 sm:text-center">
+                    <p className="sm:bg-gray-100 sm:px-4 sm:py-1 rounded-full">
                       Computer Science
                     </p>
-                    <p className="bg-gray-100 px-4 py-1 rounded-full">
+                    <p className="sm:bg-gray-100 sm:px-4 sm:py-1 rounded-full">
                       Data Structures
                     </p>
-                    <p className="bg-gray-100 px-4 py-1 rounded-full">
+                    <p className="sm:bg-gray-100 sm:px-4 sm:py-1 rounded-full">
                       Machine Learning
                     </p>
-                    <p className="bg-gray-100 px-4 py-1 rounded-full">
+                    <p className="sm:bg-gray-100 sm:px-4 sm:py-1 rounded-full">
                       Web Development
                     </p>
                   </div>
@@ -81,20 +81,20 @@ function RemainingDetails({ currentTab }) {
                 <p className="font-bold  text-xl">
                   Diploma in Computer Science
                 </p>
-                <div className="flex justify-between  items-center">
-                  <div className="flex items-center text-gray-400 font-semibold">
+                <div className="md:flex text-sm justify-between items-center">
+                  <div className="flex items-center sm:mt-0 mt-2 text-gray-400 font-semibold">
                     <FaBook />
-                    <p className="ml-1">Indian Institute of Diploma</p>
+                    <p className="ml-1">Indian Institute of Technology</p>
                   </div>
 
-                  <div className="flex items-center text-gray-400 font-semibold">
+                  <div className="flex items-center my-2 md:my-0 text-gray-400 font-semibold">
                     <FaLocationDot />
                     <p className="ml-1">Mumbai, India</p>
                   </div>
 
-                  <div className="flex items-center text-gray-400 font-semibold">
+                  <div className="flex items-center mb-2 md:mb-0 text-gray-400 font-semibold">
                     <Calendar size={20} />
-                    <p className="ml-1">2018 - 2020</p>
+                    <p className="ml-1">2020 - 2024</p>
                   </div>
 
                   <div className="flex items-center text-gray-400 font-semibold">
@@ -104,18 +104,18 @@ function RemainingDetails({ currentTab }) {
                 </div>
 
                 <div className="my-5">
-                  <p className="font-semibold mb-2">Key Subjects</p>
-                  <div className="flex items-center font-semibold justify-between ">
-                    <p className="bg-gray-100 px-4 py-1 rounded-full">
+                  <p className="font-semibold  mb-2">Key Subjects</p>
+                  <div className="grid grid-cols-1 text-gray-400 sm:text-[#292E1E] sm:grid-cols-2 md:grid-cols-4 sm:gap-5 sm:text-center">
+                    <p className="sm:bg-gray-100 sm:px-4 sm:py-1 rounded-full">
                       Computer Science
                     </p>
-                    <p className="bg-gray-100 px-4 py-1 rounded-full">
+                    <p className="sm:bg-gray-100 sm:px-4 sm:py-1 rounded-full">
                       Data Structures
                     </p>
-                    <p className="bg-gray-100 px-4 py-1 rounded-full">
+                    <p className="sm:bg-gray-100 sm:px-4 sm:py-1 rounded-full">
                       Machine Learning
                     </p>
-                    <p className="bg-gray-100 px-4 py-1 rounded-full">
+                    <p className="sm:bg-gray-100 sm:px-4 sm:py-1 rounded-full">
                       Web Development
                     </p>
                   </div>
